@@ -16,7 +16,7 @@ Easiest way to play:
 1. Download the standalone [manbikishonen.prg](https://raw.githubusercontent.com/sdesros/vic-manbiki-shonen/master/manbikishonen.prg) file.
 2. Run it on your 8K Vic-20
 3. "S" to start on the title screen ("P" on the title-screen will change it to "PET" color, "V" back to VIC-20)
-4. Use A - D (left right), P - L (up and down) and "SPACE" for pickpocket.
+4. Use A - D (left and right), P - L (up and down) and "SPACE" for shoplifting.
     * You can also use cursor keys for movement (for emulators)
 5. Enjoy! :)
 
