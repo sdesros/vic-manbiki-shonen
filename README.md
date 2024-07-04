@@ -56,7 +56,7 @@ This project was created in [CBM Prg Studio](https://www.ajordison.co.uk/)
 
 ## How to build and run
 ### Environment
-Due to how the VIC-20 rearranges its memory map when dealing with memory exansions, 8k+ VIC-20s makes working with custom character sets a little cumbersome. There was not enough space to to squeeze them into the tape buffer, so I needed to move the start of basic pointer in order to store the character set in an accessible location.
+Due to how the VIC-20 rearranges its memory map when dealing with memory exansions, 8k+ VIC-20s makes working with custom character sets a little cumbersome. There was not enough space to squeeze them into the tape buffer, so I needed to move the start of basic pointer in order to store the character set in an accessible location.
 
 ### Building
 You can use CBM Prg Studio to convert all of the BASIC files into PRG files.  Use the already existing PRG files in the root of this project or the [d64](https://github.com/sdesros/vic-manbiki-shonen/raw/master/manbikid64.d64) file if you haven't made any code changes.
