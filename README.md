@@ -21,7 +21,7 @@ Easiest way to play:
 5. Enjoy! :)
 
 ### Conversion Notes
-This version is a conversion from Robin's slightly optimized version of the game Shoplifting Boy".
+This version is a conversion from Robin's slightly optimized version of the game "Shoplifting Boy".
 
 Changes made:
 * Conversion of the audio is approximate.  Tried to map the PET tones used to the VIC-20's, but not always possible due to how they are ordered.
