@@ -21,9 +21,7 @@ Easiest way to play:
 5. Enjoy! :)
 
 Or via a browser based emulator:
-https://www.sdesros.ca/vic20/emulator/index.html?load=https://www.sdesros.ca/vic20/emulator/software/manbikishonen.prg
-or on my janky site:
-https://sdesros.ca/vic20/
+https://sdesros.ca/vic20/?gamefile=manbikishonen
 
 ### Conversion Notes
 This version is a conversion from Robin's slightly optimized version of the game "Shoplifting Boy".
