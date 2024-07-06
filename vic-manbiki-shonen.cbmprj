@@ -15,8 +15,8 @@
     <DiskDirectoryName>VIC-MANBIKI</DiskDirectoryName>
     <StartPrg>C:\Users\tb741\OneDrive\Documents\VIC-20_projects\vic-manbiki-shonen\boot.prg</StartPrg>
     <Comments />
-    <Author />
-    <Email />
+    <Author>Stephane Desrosiers</Author>
+    <Email>td741_ca@yahoo.com</Email>
     <AutoLaunchName>vic-manbiki-shonen.prg</AutoLaunchName>
     <NoSingleFileBuild>False</NoSingleFileBuild>
     <CreatedWithVersion>CBM prg Studio 4.2.0</CreatedWithVersion>
@@ -142,7 +142,7 @@
             <IncludeInBuild>True</IncludeInBuild>
             <Regions />
             <Breakpoints />
-            <Bookmarks>0,</Bookmarks>
+            <Bookmarks>2,</Bookmarks>
             <Topmost>False</Topmost>
             <FileOpen>True</FileOpen>
         </SourceFile>

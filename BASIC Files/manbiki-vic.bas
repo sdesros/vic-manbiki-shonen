@@ -1,5 +1,6 @@
 !- Shoplifting Boy Main Code.
 !- x,y Player Position, x1, y1 Previous position
+!- d - player direction (new)
 !- i$ - input command
 !- r - 'collision detection' - converts x,y to screen memory
 !- s - number of shoplifted items
@@ -21,7 +22,7 @@
 !- Sound: 59467,16 -> Turns on sound -> volume?
 !- Sound: 59466,<value> -> select octave 15 = low octave
 !- Sound: 59464,<frequency> -> select note = mapping to 36874. 0 to turn off
-100v=36875:x=18:y=11:q=1:k=4096:pO36878,15:pOv,0
+100v=36875:x=18:y=11:q=1:k=4096:pO36878,15:pOv,0:d=1
 500?"{clear}":goS900
 !- attract
 520?leF(h$,2)sP7)"p l a y"
@@ -130,9 +131,9 @@
 !- Character is 3x3, r= middle character first column of character
 !- 6 => moving right check for empty on the right top and right bottom (don't care for middle)
 !- note: x has been altered by the second then close so xand1 check reversed and r based off of previous location
-3010ifi$="d"ori$="{right}"tHx=x-(x<40):ifpE(r-21)=32or(xaN1)tHifpE(r+23)=32or(xaN1)tH3080
+3010ifi$="d"ori$="{right}"tHx=x-(x<40):d=0:ifpE(r-21)=32or(xaN1)tHifpE(r+23)=32or(xaN1)tH3080
 !- 4 => moving left check for empty on the leftf top and left bottom (skip middle)
-3020ifi$="a"ori$="{left}"tHx=x+(x>6):ifpE(r-24)=32or(xaN1)=0tHifpE(r+20)=32or(xaN1)=0tH3080
+3020ifi$="a"ori$="{left}"tHx=x+(x>6):d=1:ifpE(r-24)=32or(xaN1)=0tHifpE(r+20)=32or(xaN1)=0tH3080
 !- moving up, check top let and right for collision
 3030ifi$="p"ori$="{up}"tHy=y+(y>4):ifpE(r-45)=32tHifpE(r-44)=32tH3080
 !- moving down check bottom left and bottom right for collision
@@ -143,11 +144,24 @@
 3080?leF(h$,y1)sPx1/2-1)"{space*2}{down}{left*2}{space*2}{down}{left*2}{space*2}";
 !- draw charater change character based on writing.
 !- xand1 -> odd number, not fully moved
+!- in original pet version, xand1 also was direction?
 3090ifxaN1tH3110
+!- insert direction
+3092if(d=1)tH3100;
+!- vic-20 bug can't print chr$(34) follow by control code characters as it prints the control codes tokens and does not interpret. Needs a n/l to break or another chr$(34)
+3094?leF(h$,y)sPx/2-1)"j {down}{left*2}&";cH(34):?leF(h$,y+2)sPx/2-1);
+3097if(yaN1)=0tH?"'l";:gO3120
+3098?"'(";:gO3120
+!- regular
 3100?leF(h$,y)sPx/2-1)"j {down}{left*2}kl{down}{left*2}";
 3103if(yaN1)=0tH?"rn";:gO3120
 3105?";n";:gO3120
-3110?leF(h$,y)sPx/2-1)" s{down}{left*2}tx{down}{left*2}";
+!- new direction code
+3110if(d=1)tH3114
+3111?leF(h$,y)sPx/2-1)" s{down}{left*2}{pound}]{down}{left*2}";
+3112if(yaN1)=0tH?"{arrow left}^";:gO3120
+3113?"{arrow left}%";:gO3120
+3114?leF(h$,y)sPx/2-1)" s{down}{left*2}tx{down}{left*2}";
 3115if(yaN1)=0tH?"vw";:gO3120
 3117?"{pound}[";
 !- if spacebar not pressed continue
