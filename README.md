@@ -21,7 +21,7 @@ Easiest way to play:
 5. Enjoy! :)
 
 Or via a browser based emulator:
-https://sdesros.ca/vic20/?gamefile=manbikishonen
+https://sdesros.ca/vic20/?gamefile=manbikishonen (if it doesn't load properly, hit the stop button and play)
 
 ### Conversion Notes
 This version is a conversion from Robin's slightly optimized version of the game "Shoplifting Boy".
@@ -29,9 +29,9 @@ This version is a conversion from Robin's slightly optimized version of the game
 Changes made:
 * Conversion of the audio is approximate.  Tried to map the PET tones used to the VIC-20's, but not always possible due to how they are ordered.
 * Reformated most screens for the VIC-20's 22x23 display.  Some of these animations are shorter, and I may introduce additional delays.
-* The actual game board is recreated using custom defined VIC-20 graphics to best fit the game on a smaller screen.  
-  * Characters occupy 1.5 columns instead of 3 and will move in "half" column increments.
-  * Shelves are merged into 1 character instead of using 2 different characters.
+* The actual game board is recreated using custom defined VIC-20 graphics to best fit the game on a smaller screen. ![gameboard](screenshots/gameboard.bmp)
+  * Characters occupy 1.5 columns instead of 3 and will move in "half" column increments. ![gameboard](screenshots/character_sheet.bmp)
+  * Shelves are merged into 1 character instead of using 2 different characters. 
   * In order to fit the whole play area I had to collapse the top score area into 1 row and move the warden up more.
   * Therefore there is some minor changes to game logic to accomodate the half steps, different characters and new spacing.
   * VIC-20 will only use this character set during game play
